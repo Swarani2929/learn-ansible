@@ -10,7 +10,7 @@
 - name: Play Level Variables from Files
   hosts: localhost
   vars_files:
-    -var.yml
+    - var.yml
   tasks:
     - name: Print Play Variable from file
       ansible.builtin.debug:
