@@ -39,9 +39,15 @@
     - name: Get Uptime Output
       ansible.builtin.shell: uptime
       register: out
+
     - name: Print Out
       ansible.builtin.debug:
         msg: "{{ out }}"
+
     - name: Declare a Variable
       ansible.builtin.set_fact:
         status: "{{ out.rc }}"
+
+    - name: Print Variable Status
+      ansible.builtin.debug:
+        msg: "{{ status }}"
